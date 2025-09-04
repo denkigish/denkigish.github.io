@@ -3,52 +3,15 @@ layout: default
 title: Home
 ---
 
-<!-- Hero Section -->
-<section class="hero">
-  <h1>Hi, I'm Miguel Mastache</h1>
-  <p>I build projects and write about them. Welcome to my portfolio and blog.</p>
-</section>
-
-<!-- Featured Projects -->
-<section class="projects">
-  <h2>Featured Projects</h2>
-  <div class="project-list">
-    <div class="project-card">
-      <img src="/assets/images/project1.png" alt="Project 1 screenshot">
-      <h3><a href="/projects/project1">Project One</a></h3>
-      <p>Short description of Project One. What it does, why it’s cool.</p>
-      <a href="https://github.com/yourusername/project1">View on GitHub →</a>
-    </div>
-
-    <div class="project-card">
-      <img src="/assets/images/project2.png" alt="Project 2 screenshot">
-      <h3><a href="/projects/project2">Project Two</a></h3>
-      <p>Short description of Project Two. A neat thing you built.</p>
-      <a href="https://github.com/yourusername/project2">View on GitHub →</a>
-    </div>
-  </div>
-</section>
-
-<!-- Latest Blog Posts -->
-<section class="blog">
+<section class="blog-posts">
   <h2>Latest Blog Posts</h2>
   <ul>
-    {% for post in site.posts limit:3 %}
+    {% for post in site.posts %}
       <li>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <small>{{ post.date | date: "%B %d, %Y" }}</small>
-        <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span>{{ post.date | date: "%B %d, %Y" }}</span>
+        <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
   </ul>
-  <p><a href="/blog">View all posts →</a></p>
 </section>
-
-<!-- About / Footer -->
-<footer>
-  <p>© {{ site.time | date: "%Y" }} Miguel Mastache</p>
-  <p>
-    <a href="https://github.com/yourusername">GitHub</a> •
-    <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-  </p>
-</footer>
