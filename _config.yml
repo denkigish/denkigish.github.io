@@ -5,3 +5,8 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-seo-tag
+title: Mastache Q Division
+email: byte@mastache.cloud
+description: Mastache Q Divison - Applied Sciences Division
+github_username: denkigish
+url: "http://mastache.cloud"
